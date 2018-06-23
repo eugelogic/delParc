@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+0.0 GLOBAL STYLES
+--------------------------------------------------------------*/
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
@@ -36,16 +39,17 @@ h2 {
   text-transform: uppercase;
 }
 
-.site-header {
+a {
+  text-decoration: none;
+  color: #323232;
+  &:hover {
+    color: #E5C100;
+  }
+}
+
+.site-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  a {
-    text-decoration: none;
-    color: #323232;
-    &:hover {
-      color: #E5C100;
-    }
-  }
 }
 
 .tile {
@@ -56,6 +60,18 @@ h2 {
   border: 5px solid rgba(0, 0, 0, 0.01);
   border-radius: 3px;
   font-size: 35px;
+  p {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+?.0 SITE HEADER
+--------------------------------------------------------------*/
+.site-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .nav-menu-tile {
@@ -83,6 +99,117 @@ h2 {
   }
 }
 
+/*--------------------------------------------------------------
+1.0 HOMEPAGE
+--------------------------------------------------------------*/
+.hero-tile {
+  grid-column: 1 / 9;
+  height: 510px;
+  background-image: url("/images/dummy-storefront.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  color: white;
+}
+
+.hero-tile h1 {
+  font-size: 1em;
+  text-align: center;
+  align-self: center;
+}
+
+.hero-tile h1 a {
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 0.125em 0.5em;
+}
+
+.hero-tile h1 a:hover {
+  color: #E5C100;
+  border: solid 1px #E5C100;
+}
+
+.info-tile {
+  grid-column: 9 / -1;
+  height: 510px;
+  a {
+    text-decoration: none;
+    color: #323232;
+    &:hover {
+      color: #E5C100;
+    }
+  }
+}
+.info-tile h2, .info-tile p {
+  text-align: center;
+}
+
+.info-tile a {
+  text-decoration: underline;
+}
+
+.hp-food-menus-tile {
+  grid-column: 1 / 4;
+  height: auto;
+  text-align: center;
+  background: url("/images/menus.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  margin-left: 5px;
+}
+
+.hp-food-menus-tile h2,
+.drinks-tile h2,
+.shop-tile h2
+{
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.hp-food-menus-tile a:hover h2,
+.drinks-tile a:hover h2,
+.shop-tile a:hover h2
+{
+  color: #E5C100;
+  border: solid 1px #E5C100;
+}
+
+.about-tile {
+  grid-column: 4 / 10;
+  height: auto;
+}
+
+.about-tile p {
+  padding: 2em;
+}
+
+.drinks-tile {
+  grid-column: 10 / -1;
+  height: auto;
+  text-align: center;
+  background: url("/images/drinks.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  margin-right: 5px;
+}
+
+.shop-tile {
+  grid-column: 1 / -1;
+  height: 480px;
+  color: white;
+  text-align: center;
+  background: url("/images/shop-bg.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+/*--------------------------------------------------------------
+?.0 FOOTER
+--------------------------------------------------------------*/
 .site-footer {
   border: 5px solid rgba(0, 0, 0, 0.01);
   border-radius: 3px;
@@ -104,6 +231,35 @@ h2 {
   margin-bottom: -10px;
 }
 
+/*--------------------------------------------------------------
+?.0 MEDIA QUERIES
+--------------------------------------------------------------*/
+@media (max-width: 1080px) {
+  .hero-tile,
+  .info-tile {
+    height: auto;
+  }
+  .about-tile {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+  .hp-food-menus-tile {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+    height: 240px;
+    margin-left: 0;
+  }
+  .drinks-tile {
+    grid-column: 7 / -1;
+    grid-row: 3 / 4;
+    height: 240px;
+    margin-right: 0;
+  }
+  .shop-tile {
+    margin-top: 5px;
+  }
+}
+
 /* Tablet resolution */
 @media (max-width: 930px) {
   /* GLOBAL */
@@ -115,9 +271,39 @@ h2 {
       grid-column: 7 / -1;
       grid-row: 2 / 3;
     }
+  /* HOMEPAGE */
+  .hero-tile {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  .hero-tile h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .info-tile {
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+  }
+  .about-tile {
+    grid-column: 7 / -1;
+    grid-row: 2 / 3;
+  }
+  .hp-food-menus-tile {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+  }
+  .drinks-tile {
+    grid-column: 7 / -1;
+    grid-row: 3 / 4;
+  }
+  .shop-tile {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
-
-  /* Mobile resolution */
+/* Mobile resolution */
 @media (max-width: 630px) {
   /* GLOBAL */
   .nav-menu-tile {
@@ -128,4 +314,35 @@ h2 {
       grid-column: 1 / -1;
       grid-row: 3 / 4;
     }
+/* HOMEPAGE */
+  .hero-tile {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-right: 5px;
+  }
+  .hero-tile h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .info-tile {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  .about-tile {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+  .hp-food-menus-tile {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    margin-bottom: 10px;
+  }
+  .drinks-tile {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+  }
+  .shop-tile {
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+  }
 }
