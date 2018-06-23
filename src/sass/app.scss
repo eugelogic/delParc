@@ -17,32 +17,35 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  display: block;
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 5px 0;
+  margin: 0 0 5px;
 }
 
 h2 {
-  font-size: 0.75em;
+  font-size: .75em;
   text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-  color: #323232;
-}
-
-a:hover {
-  color: #E5C100;
 }
 
 .site-header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  a {
+    text-decoration: none;
+    color: #323232;
+    &:hover {
+      color: #E5C100;
+    }
+  }
 }
 
 .tile {
@@ -78,6 +81,27 @@ a:hover {
   a {
     text-align: center;
   }
+}
+
+.site-footer {
+  border: 5px solid rgba(0, 0, 0, 0.01);
+  border-radius: 3px;
+}
+
+.site-footer__copyright,
+.site-footer__credits {
+  text-align: center;
+  font-size: 14px;
+  a {
+    color: #323232;
+    &:hover {
+      color: #E5C100;
+    }
+  }
+}
+
+.site-footer__copyright {
+  margin-bottom: -10px;
 }
 
 /* Tablet resolution */
