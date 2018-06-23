@@ -6,6 +6,7 @@ import runSequence from 'run-sequence'
 import gulpLoadPlugins from 'gulp-load-plugins'
 import { spawn } from "child_process"
 import tildeImporter from 'node-sass-tilde-importer'
+import fs from 'fs';
 
 const $ = gulpLoadPlugins()
 const browserSync = require('browser-sync').create()
@@ -40,16 +41,40 @@ gulp.task('init-watch', () => {
     $.watch('src/sass/**/*.scss', () => gulp.start('sass'))
     $.watch('src/js/**/*.js', () => gulp.start('js-watch'))
     $.watch('src/images/**/*', () => gulp.start('images'))  
+    $.watch('src/lambda/**/*', () => gulp.start('build-functions'))  
 })
 
 gulp.task('build', () => {
-    runSequence(['sass', 'js', 'fonts', 'images', 'pub-delete'], 'hugo')
+    runSequence('pub-delete', ['sass', 'js', 'fonts', 'images', 'build-functions'], 'hugo')
 })
 
 gulp.task('build-preview', () => {
-    runSequence(['sass', 'js', 'fonts', 'images', 'pub-delete'], 'hugo-preview')
+    runSequence('pub-delete', ['sass', 'js', 'fonts', 'images', 'build-functions'], 'hugo-preview')
 })
 
+
+gulp.task('build-functions', (cb) => {
+
+    fs.readdir('./src/lambda', (err, files) => {
+        if (err) {
+            cb(err);
+        }
+        if (!files.filter(file => file.endsWith('.js')).length) {
+            console.log('No Netlify functions.');
+            cb();
+            return;
+        }
+        return spawn('netlify-lambda', ['build', 'src/lambda'], { stdio: 'inherit' }).on('close', (code) => {
+            if (code === 0) {
+                cb();
+            } else {
+                console.log('netlify-lambda failed.');
+                cb('netlify-lambda failed.');
+            }
+        })
+    })
+
+})
 
 
 gulp.task('hugo', (cb) => {
@@ -66,7 +91,6 @@ gulp.task('hugo', (cb) => {
         }
     })
 })
-
 
 
 gulp.task('hugo-preview', (cb) => {
@@ -94,8 +118,8 @@ gulp.task('sass', () => {
     ])
     .pipe($.plumber({ errorHandler: onError }))
     .pipe($.print())
-    .pipe($.sassLint())
-    .pipe($.sassLint.format())
+    .pipe($.if(!isProduction, $.sassLint()))
+    .pipe($.if(!isProduction, $.sassLint.format()))
     .pipe($.sass({ precision: 5, importer: tildeImporter }))
     .pipe($.autoprefixer(['ie >= 10', 'last 2 versions']))
     .pipe($.if(isProduction, $.cssnano({ discardUnused: false, minifyFontValues: false })))
@@ -140,7 +164,7 @@ gulp.task('cms-delete', () => {
 })
 
 gulp.task('pub-delete', () => {
-    return del(['public/**', '!public'], {
+    return del(['public/**', '!public', 'functions/**', '!functions'], {
       // dryRun: true,
       dot: true
     }).then(paths => {
