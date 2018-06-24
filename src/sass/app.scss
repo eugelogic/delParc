@@ -39,6 +39,11 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+
 a {
   text-decoration: none;
   color: #323232;
@@ -228,7 +233,7 @@ a {
 FOOD MENUS PAGE
 --------------------------------------------------------------*/
 .menu-tile,
-.food-menus-tile {
+.food-menus-list-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   ul {
@@ -241,6 +246,25 @@ FOOD MENUS PAGE
      text-transform: uppercase;
      margin-bottom: 1rem;
    }
+  }
+}
+
+/*--------------------------------------------------------------
+?.0 All pages with a FOOD MENU
+--------------------------------------------------------------*/
+.food-menu-tile {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  h3 {
+    text-align: center;
+    text-decoration: underline;
   }
 }
 
@@ -351,7 +375,14 @@ FOOD MENUS PAGE
   .social-media-tile {
       grid-column: 1 / -1;
       grid-row: 3 / 4;
-    }
+  }
+  .page-title-bar h1 {
+      font-size: 30px;
+  }
+  .food-menu-tile p {
+    margin-left: .75em;
+    margin-right: .75em;
+  }
 /* HOMEPAGE */
   .hero-tile {
     grid-column: 1 / -1;
