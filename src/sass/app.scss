@@ -233,7 +233,8 @@ a {
 FOOD MENUS PAGE
 --------------------------------------------------------------*/
 .menu-tile,
-.food-menus-list-tile {
+.food-menus-list-tile,
+.drinks-list-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   ul {
@@ -252,7 +253,8 @@ FOOD MENUS PAGE
 /*--------------------------------------------------------------
 ?.0 All pages with a FOOD MENU
 --------------------------------------------------------------*/
-.food-menu-tile {
+.food-menu-tile,
+.drinks-menu-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   padding-top: 1em;
@@ -265,6 +267,11 @@ FOOD MENUS PAGE
   h3 {
     text-align: center;
     text-decoration: underline;
+  }
+  h4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
   }
 }
 
@@ -379,7 +386,9 @@ FOOD MENUS PAGE
   .page-title-bar h1 {
       font-size: 30px;
   }
-  .food-menu-tile p {
+  .food-menu-tile p,
+  .drinks-menu-tile p,
+  .drinks-menu-tile h4 {
     margin-left: .75em;
     margin-right: .75em;
   }
