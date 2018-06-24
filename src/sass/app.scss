@@ -55,6 +55,7 @@ a {
 .site-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-gap: 5px; // this is really only necessary for the Shop gallery, I wish I could lose it
 }
 
 .tile {
@@ -277,6 +278,46 @@ FOOD MENUS PAGE
 }
 
 /*--------------------------------------------------------------
+?.0 SHOP PAGE
+--------------------------------------------------------------*/
+// .image-01 {
+//   grid-column: 1 / 4;
+//   height: 300px;
+//   text-align: center;
+//   background: url("/images/shop02.jpg");
+//   background-repeat:no-repeat;
+//   background-size:cover;
+//   background-position:center center;
+// }
+// .image-02 {
+//   grid-column: 4 / 7;
+//   // height: 480px;
+//   text-align: center;
+//   background: url("/images/shop03.jpg");
+//   background-repeat:no-repeat;
+//   background-size:cover;
+//   background-position:center center;
+// }
+// .image-03 {
+//   grid-column: 7 / 10;
+//   // height: 480px;
+//   text-align: center;
+//   background: url("/images/shop05.jpg");
+//   background-repeat:no-repeat;
+//   background-size:cover;
+//   background-position:center center;
+// }
+// .image-04 {
+//   grid-column: 10 / 13;
+//   // height: 480px;
+//   text-align: center;
+//   background: url("/images/shop09.jpg");
+//   background-repeat:no-repeat;
+//   background-size:cover;
+//   background-position:center center;
+// }
+
+/*--------------------------------------------------------------
 ?.0 FOOTER
 --------------------------------------------------------------*/
 .site-footer {
@@ -328,6 +369,22 @@ FOOD MENUS PAGE
   .shop-tile {
     margin-top: 5px;
   }
+  // .image-01 {
+  //   grid-column: 1 / 7;
+  //   grid-row: 3 / 4;
+  // }
+  // .image-02 {
+  //   grid-column: 7 / 13;
+  //   grid-row: 3 / 4;
+  // }
+  // .image-03 {
+  //   grid-column: 1 / 7;
+  //   grid-row: 4 / 5;
+  // }
+  // .image-04 {
+  //   grid-column: 7 / 13;
+  //   grid-row: 4 / 5;
+  // }
 }
 
 /* Tablet resolution */
