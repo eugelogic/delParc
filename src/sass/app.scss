@@ -223,20 +223,24 @@ a {
 }
 
 /*--------------------------------------------------------------
-2.0 MAIN NAVIGATION MENU PAGE
+?.0 MAIN NAVIGATION MENU PAGE
+&
+FOOD MENUS PAGE
 --------------------------------------------------------------*/
-.menu-tile {
+.menu-tile,
+.food-menus-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
-}
-.menu-tile ul {
-  list-style-type: none;
-  padding-left: 0;
-  text-align: center;
-  li {
-    font-size: .75em;
-    font-weight: bold;
-    text-transform: uppercase;
+  ul {
+   list-style-type: none;
+   padding-left: 0;
+   text-align: center;
+   li {
+     font-size: .75em;
+     font-weight: bold;
+     text-transform: uppercase;
+     margin-bottom: 1rem;
+   }
   }
 }
 
