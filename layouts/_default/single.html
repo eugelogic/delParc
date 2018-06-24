@@ -1,8 +1,9 @@
 {{ define "main" }}
 
-    <article>
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
+  <div class="tile page-title-bar">
+    <h1>{{ .Title }}</h1>
+  </div>
+
+    {{ .Content }}
 
 {{ end }}

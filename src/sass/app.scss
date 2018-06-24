@@ -66,6 +66,20 @@ a {
   }
 }
 
+.page-title-bar {
+  grid-column: 1 / -1;
+  height: 120px;
+  background-image: url("/images/dummy-storefront.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+}
+
 /*--------------------------------------------------------------
 ?.0 SITE HEADER
 --------------------------------------------------------------*/
@@ -207,6 +221,25 @@ a {
   background-size:cover;
   background-position:center center;
 }
+
+/*--------------------------------------------------------------
+2.0 MAIN NAVIGATION MENU PAGE
+--------------------------------------------------------------*/
+.menu-tile {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+.menu-tile ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  li {
+    font-size: .75em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
 /*--------------------------------------------------------------
 ?.0 FOOTER
 --------------------------------------------------------------*/
