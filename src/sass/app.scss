@@ -254,7 +254,8 @@ FOOD MENUS PAGE
 ?.0 All pages with a FOOD MENU
 --------------------------------------------------------------*/
 .food-menu-tile,
-.drinks-menu-tile {
+.drinks-menu-tile,
+.about-page-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   padding-top: 1em;
@@ -388,7 +389,8 @@ FOOD MENUS PAGE
   }
   .food-menu-tile p,
   .drinks-menu-tile p,
-  .drinks-menu-tile h4 {
+  .drinks-menu-tile h4,
+  .about-page-tile p {
     margin-left: .75em;
     margin-right: .75em;
   }
