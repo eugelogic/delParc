@@ -55,7 +55,7 @@ a {
 .site-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 5px; // this is really only necessary for the Shop gallery, I wish I could lose it
+  // grid-gap: 5px; // this is really only necessary for the Shop gallery, I wish I could add it to that only rather than having it globally
 }
 
 .tile {
