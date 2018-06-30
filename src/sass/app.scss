@@ -252,11 +252,13 @@ FOOD MENUS PAGE
 }
 
 /*--------------------------------------------------------------
-?.0 All pages with a FOOD MENU
+?.0 Internal pages
 --------------------------------------------------------------*/
 .food-menu-tile,
 .drinks-menu-tile,
-.about-page-tile {
+.about-page-tile,
+.shop-page-tile,
+.contact-page-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   padding-top: 1em;

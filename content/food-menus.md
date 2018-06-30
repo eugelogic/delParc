@@ -2,7 +2,7 @@
 title: "Food Menus"
 draft: false
 ---
-<!-- Menu tile -->
+<!-- Food Menus List tile -->
 <div class="tile food-menus-list-tile">
   <ul>
     <li>

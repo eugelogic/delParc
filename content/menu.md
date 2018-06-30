@@ -2,7 +2,7 @@
 title: "Menu"
 draft: false
 ---
-<!-- Menu tile -->
+<!-- Menu Navigation tile -->
 <div class="tile menu-tile">
   <ul>
     <li>
@@ -28,6 +28,11 @@ draft: false
     <li>
       <a href="/about">
         About
+      </a>
+    </li>
+    <li>
+      <a href="/contact">
+        Contact
       </a>
     </li>
   </ul>

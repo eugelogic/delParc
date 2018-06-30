@@ -2,7 +2,7 @@
 title: "Sharing Boards"
 draft: false
 ---
-<!-- Specials This Week tile -->
+<!-- Sharing Boards tile -->
 <div class="tile food-menu-tile">
   <p>Boquerones with Pickled Red Onion & Parsley Oil - 7</p>
   <p>Jamon Serrano with Spanish Pickles & Picos de Pan - 13</p>

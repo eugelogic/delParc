@@ -2,7 +2,7 @@
 title: "Sharing Plates"
 draft: false
 ---
-<!-- Specials This Week tile -->
+<!-- Sharing Plates tile -->
 <div class="tile food-menu-tile">
   <p>Selection of Artisan Bread - 4</p>
   <p>Gordal Queen Olives - 5</p>

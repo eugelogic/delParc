@@ -2,7 +2,7 @@
 title: "Hot Sharing Dishes"
 draft: false
 ---
-<!-- Specials This Week tile -->
+<!-- Hot Sharing Dishes tile -->
 <div class="tile food-menu-tile">
   <p>Patata Bravas - 7</p>
   <p>Tortilla of the Day - 8.5</p>
