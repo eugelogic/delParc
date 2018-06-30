@@ -30,6 +30,3 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
-
-# add Google Analytics tracking code
-googleAnalytics = "UA-39423737-7"
