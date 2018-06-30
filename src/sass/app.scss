@@ -283,6 +283,27 @@ FOOD MENUS PAGE
 }
 
 /*--------------------------------------------------------------
+?.0 Other internal pages
+--------------------------------------------------------------*/
+.privacy-policy-tile {
+  grid-column: 3 / 11;
+  grid-row: 2 / 3;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  p {
+    font-size: 20px;
+    margin-bottom: 1em;
+  }
+  h4 {
+    font-size: 30px;
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+/*--------------------------------------------------------------
 ?.0 SHOP PAGE
 --------------------------------------------------------------*/
 // .image-01 {
@@ -331,7 +352,8 @@ FOOD MENUS PAGE
 }
 
 .site-footer__copyright,
-.site-footer__credits {
+.site-footer__credits,
+.site-footer__menu {
   text-align: center;
   font-size: 14px;
   a {
