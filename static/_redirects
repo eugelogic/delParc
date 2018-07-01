@@ -1,0 +1,25 @@
+# Redirects from what the browser requests to what we serve
+/menus            							/food-menus
+/contacts			            			/contact
+/wines						            	/drinks
+/gallery						            /
+/wines/sherry					          /drinks-sherry
+/wines/cava 					          /drinks-cava/
+/bar-food						            /food-menus
+/bar-drinks 					          /drinks
+/beer-cider 		                /drinks
+/bar-images 					          /
+/wines/red-wine 				        /drinks-red-wine
+/wines/white-wine				        /drinks-white-wine
+/bar-del-parc					          /
+/menus/fish-dishes				      /food-menus
+/wines/sweet-fortified			    /drinks
+/food-del-parc					        /food-menus
+/welcome-del-parc				        /
+/menus/meat-dishes				      /food-menus
+/menus/simple-tapas 			      /food-menus
+/wines/rose-wine				        /drinks-rose-wine
+/water-soft-drinks				      /drinks
+/wines-del-parc 				        /drinks
+/menus/puddings-cheese			    /food-menus
+/menus/vegetables-cheese-dishes /food-menus
