@@ -25,5 +25,10 @@ draft: false
         Red Wine
       </a>
     </li>
+    <li>
+      <a href="/drinks-sherry">
+        Sherry
+      </a>
+    </li>
   </ul>
 </div>
