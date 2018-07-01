@@ -258,7 +258,8 @@ FOOD MENUS PAGE
 .drinks-menu-tile,
 .about-page-tile,
 .shop-page-tile,
-.contact-page-tile {
+.contact-page-tile,
+.not-found-page-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
   padding-top: 1em;
