@@ -1,22 +1,29 @@
 /*--------------------------------------------------------------
 0.0 GLOBAL STYLES
+1.0 SITE HEADER
+2.0 HOMEPAGE
+3.0 MAIN NAVIGATION MENU PAGE & FOOD MENUS PAGE
+4.0 INTERNAL PAGES
+5.0 OTHER INTERNAL PAGES
+6.0 FOOTER
+7.0 MEDIA QUERIES
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+0.0 GLOBAL STYLES
+--------------------------------------------------------------*/
+// border-box box model allows us to add padding and border to our elements without increasing their size
 html {
-  /* border-box box model allows us to add padding and border to our elements without increasing their size */
-  box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 18px;
+    color: #323232;
+  }
 
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 18px;
-  color: #323232;
-}
-
-/*
-  We inherit box-sizing: border-box; from our <html> selector
-  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
-*/
+// We inherit box-sizing: border-box; from our <html> selector
+// Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -40,46 +47,49 @@ h2 {
 }
 
 h3 {
-  font-size: 0.5em;
-  text-transform: uppercase;
+    font-size: .5em;
+    text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
   color: #323232;
+
   &:hover {
-    color: #E5C100;
+    color: #e5c100;
   }
 }
 
 .site-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  // grid-gap: 5px; // this is really only necessary for the Shop gallery, I wish I could add it to that only rather than having it globally
+  grid-gap: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .tile {
-  /* We center the contents of these items. You can also do this with flexbox too! */
   display: grid;
   justify-content: center;
   align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.01);
   border-radius: 3px;
   font-size: 35px;
+
   p {
     font-size: 18px;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
   }
 }
 
 .page-title-bar {
   grid-column: 1 / -1;
   height: 120px;
-  background-image: url("/images/dummy-storefront.jpg");
+  background-image: url('/images/dummy-storefront.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   color: white;
+
   h1 {
     font-size: 36px;
     text-transform: uppercase;
@@ -87,7 +97,7 @@ a {
 }
 
 /*--------------------------------------------------------------
-?.0 SITE HEADER
+1.0 SITE HEADER
 --------------------------------------------------------------*/
 .site-header {
   display: grid;
@@ -97,14 +107,17 @@ a {
 .nav-menu-tile {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  position: relative;
+  z-index: 10;
 }
 
 .logo-tile {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   height: 120px;
+
   a {
-    height: 60px
+    height: 60px;
   }
 }
 
@@ -114,53 +127,59 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   font-size: 30px;
+
   a {
     text-align: center;
   }
 }
 
 /*--------------------------------------------------------------
-1.0 HOMEPAGE
+2.0 HOMEPAGE
 --------------------------------------------------------------*/
 .hero-tile {
   grid-column: 1 / 9;
   height: 510px;
-  background-image: url("/images/dummy-storefront.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-image: url('/images/dummy-storefront.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
-}
 
-.hero-tile h1 {
-  font-size: 1em;
-  text-align: center;
-  align-self: center;
-}
+  h1 {
+    font-size: 1em;
+    text-align: center;
+    align-self: center;
 
-.hero-tile h1 a {
-  color: white;
-  border: solid 1px white;
-  border-radius: 5px;
-  padding: 0.125em 0.5em;
-}
+    a {
+      color: white;
+      border: solid 1px white;
+      border-radius: 5px;
+      padding: 0.125em 0.5em;
 
-.hero-tile h1 a:hover {
-  color: #E5C100;
-  border: solid 1px #E5C100;
+      &:hover,
+      &:focus {
+        color: #e5c100;
+        border: solid 1px #e5c100;
+      }
+    }
+  }
 }
 
 .info-tile {
   grid-column: 9 / -1;
   height: 510px;
+
   a {
     text-decoration: none;
     color: #323232;
+
     &:hover {
-      color: #E5C100;
+      color: #e5c100;
     }
   }
 }
-.info-tile h2, .info-tile p {
+
+.info-tile h2,
+.info-tile p {
   text-align: center;
 }
 
@@ -172,11 +191,10 @@ a {
   grid-column: 1 / 4;
   height: auto;
   text-align: center;
-  background: url("/images/menus.jpg");
+  background: url('/images/menus.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
-  margin-left: 5px;
 }
 
 .hp-food-menus-tile h2,
@@ -193,8 +211,8 @@ a {
 .drinks-tile a:hover h2,
 .shop-tile a:hover h2
 {
-  color: #E5C100;
-  border: solid 1px #E5C100;
+  color: #e5c100;
+  border: solid 1px #e5c100;
 }
 
 .about-tile {
@@ -210,11 +228,10 @@ a {
   grid-column: 10 / -1;
   height: auto;
   text-align: center;
-  background: url("/images/drinks.jpg");
+  background: url('/images/drinks.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
-  margin-right: 5px;
 }
 
 .shop-tile {
@@ -222,26 +239,26 @@ a {
   height: 480px;
   color: white;
   text-align: center;
-  background: url("/images/shop-bg.jpg");
+  background: url('/images/shop-bg.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
 }
 
 /*--------------------------------------------------------------
-?.0 MAIN NAVIGATION MENU PAGE
-&
-FOOD MENUS PAGE
+3.0 MAIN NAVIGATION MENU PAGE & FOOD MENUS PAGE
 --------------------------------------------------------------*/
 .menu-tile,
 .food-menus-list-tile,
 .drinks-list-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
+
   ul {
    list-style-type: none;
    padding-left: 0;
    text-align: center;
+
    li {
      font-size: .75em;
      font-weight: bold;
@@ -252,7 +269,7 @@ FOOD MENUS PAGE
 }
 
 /*--------------------------------------------------------------
-?.0 Internal pages
+4.0 INTERNAL PAGES
 --------------------------------------------------------------*/
 .food-menu-tile,
 .drinks-menu-tile,
@@ -264,104 +281,69 @@ FOOD MENUS PAGE
   grid-row: 2 / 3;
   padding-top: 1em;
   padding-bottom: 1em;
+
   p {
     font-size: 20px;
     text-align: center;
     margin-bottom: 1em;
   }
+
   h3 {
     text-align: center;
     text-decoration: underline;
   }
+
   h4 {
     text-align: center;
     text-decoration: underline;
     font-size: 30px;
   }
+
   a {
     text-decoration: underline;
   }
 }
 
 /*--------------------------------------------------------------
-?.0 Other internal pages
+5.0 OTHER INTERNAL PAGES
 --------------------------------------------------------------*/
 .privacy-policy-tile {
   grid-column: 3 / 11;
   grid-row: 2 / 3;
   padding-top: 1em;
   padding-bottom: 1em;
+
   p {
     font-size: 20px;
     margin-bottom: 1em;
   }
+
   h4 {
     font-size: 30px;
     text-decoration: underline;
   }
+
   a {
     text-decoration: underline;
   }
 }
 
 /*--------------------------------------------------------------
-?.0 SHOP PAGE
+6.0 FOOTER
 --------------------------------------------------------------*/
-// .image-01 {
-//   grid-column: 1 / 4;
-//   height: 300px;
-//   text-align: center;
-//   background: url("/images/shop02.jpg");
-//   background-repeat:no-repeat;
-//   background-size:cover;
-//   background-position:center center;
-// }
-// .image-02 {
-//   grid-column: 4 / 7;
-//   // height: 480px;
-//   text-align: center;
-//   background: url("/images/shop03.jpg");
-//   background-repeat:no-repeat;
-//   background-size:cover;
-//   background-position:center center;
-// }
-// .image-03 {
-//   grid-column: 7 / 10;
-//   // height: 480px;
-//   text-align: center;
-//   background: url("/images/shop05.jpg");
-//   background-repeat:no-repeat;
-//   background-size:cover;
-//   background-position:center center;
-// }
-// .image-04 {
-//   grid-column: 10 / 13;
-//   // height: 480px;
-//   text-align: center;
-//   background: url("/images/shop09.jpg");
-//   background-repeat:no-repeat;
-//   background-size:cover;
-//   background-position:center center;
-// }
-
-/*--------------------------------------------------------------
-?.0 FOOTER
---------------------------------------------------------------*/
-.site-footer {
-  border: 5px solid rgba(0, 0, 0, 0.01);
-  border-radius: 3px;
-}
-
 .site-footer__copyright,
 .site-footer__credits,
 .site-footer__menu {
   text-align: center;
   font-size: 14px;
+
   a {
     color: #323232;
     text-decoration: underline;
-    &:hover {
-      color: #E5C100;
+
+    &:hover,
+    &:focus {
+      color: #e5c100;
     }
   }
 }
@@ -371,7 +353,7 @@ FOOD MENUS PAGE
 }
 
 /*--------------------------------------------------------------
-?.0 MEDIA QUERIES
+7.0 MEDIA QUERIES
 --------------------------------------------------------------*/
 @media (max-width: 1080px) {
   .hero-tile,
@@ -394,25 +376,6 @@ FOOD MENUS PAGE
     height: 240px;
     margin-right: 0;
   }
-  .shop-tile {
-    margin-top: 5px;
-  }
-  // .image-01 {
-  //   grid-column: 1 / 7;
-  //   grid-row: 3 / 4;
-  // }
-  // .image-02 {
-  //   grid-column: 7 / 13;
-  //   grid-row: 3 / 4;
-  // }
-  // .image-03 {
-  //   grid-column: 1 / 7;
-  //   grid-row: 4 / 5;
-  // }
-  // .image-04 {
-  //   grid-column: 7 / 13;
-  //   grid-row: 4 / 5;
-  // }
 }
 
 /* Tablet resolution */
@@ -426,6 +389,7 @@ FOOD MENUS PAGE
       grid-column: 7 / -1;
       grid-row: 2 / 3;
     }
+
   /* HOMEPAGE */
   .hero-tile {
     grid-column: 1 / -1;
@@ -454,10 +418,9 @@ FOOD MENUS PAGE
   .shop-tile {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
-    margin-left: 5px;
-    margin-right: 5px;
   }
 }
+
 /* Mobile resolution */
 @media (max-width: 630px) {
   /* GLOBAL */
@@ -483,7 +446,6 @@ FOOD MENUS PAGE
   .hero-tile {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    margin-right: 5px;
   }
   .hero-tile h1 {
     padding-top: 1em;
@@ -500,7 +462,6 @@ FOOD MENUS PAGE
   .hp-food-menus-tile {
     grid-column: 1 / -1;
     grid-row: 4 / 5;
-    margin-bottom: 10px;
   }
   .drinks-tile {
     grid-column: 1 / -1;
