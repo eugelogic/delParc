@@ -6,6 +6,11 @@ draft: false
 <div class="tile food-menus-list-tile">
   <ul>
     <li>
+      <a href="/food-menu-christmas">
+        Christmas Menu
+      </a>
+    </li>
+    <li>
       <a href="/food-menu-specials">
         Specials This Week
       </a>
