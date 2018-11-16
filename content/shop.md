@@ -1,6 +1,6 @@
 ---
 title: "Shop"
-draft: false
+draft: true
 ---
 <!-- Shop page tiles -->
 <div class="tile shop-page-tile">
