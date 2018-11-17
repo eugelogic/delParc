@@ -40,8 +40,8 @@ gulp.task('init-watch', () => {
     })
     $.watch('src/sass/**/*.scss', () => gulp.start('sass'))
     $.watch('src/js/**/*.js', () => gulp.start('js-watch'))
-    $.watch('src/images/**/*', () => gulp.start('images'))  
-    $.watch('src/lambda/**/*', () => gulp.start('build-functions'))  
+    $.watch('src/images/**/*', () => gulp.start('images'))
+    $.watch('src/lambda/**/*', () => gulp.start('build-functions'))
 })
 
 gulp.task('build', () => {

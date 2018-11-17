@@ -12,6 +12,6 @@ draft: false
   <p>Spiced Lamb Meatballs in Tomato Sauce & Labneh - 9</p>
   <p>Yoghurt Moroccan Chicken, Preserved Lemon - 9.5</p>
   <p>*</p>
-  <p>All menus are subject to changes</p>
+  <p>All menus are subject to changes.</p>
   <a href="/food-menus"><h3>back to food menus</h3></a>
 </div>

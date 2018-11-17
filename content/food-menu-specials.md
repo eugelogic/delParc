@@ -18,6 +18,6 @@ draft: false
   <p>Huevos Rotos with Sobrasada, <br />
   Piquillo Pepper & Spinach - 9.5</p>
   <p>*</p>
-  <p>All menus are subject to changes</p>
+  <p>All menus are subject to change.s</p>
   <a href="/food-menus"><h3>back to food menus</h3></a>
 </div>

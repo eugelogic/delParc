@@ -13,6 +13,6 @@ draft: false
   <p>Marinaded Artichoke Hearts, Basil, Capers & Mustard - 8.5</p>
   <p>Manchego Cheese 1605 with Membrillo & Torte - 7</p>
   <p>*</p>
-  <p>All menus are subject to changes</p>
+  <p>All menus are subject to changes.</p>
   <a href="/food-menus"><h3>back to food menus</h3></a>
 </div>

@@ -272,18 +272,47 @@ a {
 4.0 INTERNAL PAGES
 --------------------------------------------------------------*/
 .food-menu-tile,
-.drinks-menu-tile,
 .about-page-tile,
 .shop-page-tile,
 .contact-page-tile,
 .not-found-page-tile {
   grid-column: 1 / -1;
   grid-row: 2 / 3;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1em .5em;
 
   p {
-    font-size: 20px;
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  h4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.drinks-menu-tile {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em .5em;
+
+  p {
+    font-size: 21px;
     text-align: center;
     margin-bottom: 1em;
   }
@@ -314,7 +343,7 @@ a {
   padding-bottom: 1em;
 
   p {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 1em;
   }
 
