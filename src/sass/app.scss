@@ -218,10 +218,15 @@ a {
 .about-tile {
   grid-column: 4 / 10;
   height: auto;
-}
 
-.about-tile p {
-  padding: 2em;
+  p {
+      padding: 2em;
+  }
+
+  a {
+      text-decoration: underline;
+  }
+  
 }
 
 .drinks-tile {
