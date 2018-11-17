@@ -16,8 +16,8 @@ draft: false
       </a>
     </li>
     <li>
-      <a href="/food-menu-sharing-plates">
-        Sharing Plates
+      <a href="/food-menu-cold-sharing-dishes-and-plates">
+        Cold Sharing Dishes & Plates
       </a>
     </li>
     <li>
@@ -26,8 +26,8 @@ draft: false
       </a>
     </li>
     <li>
-      <a href="/food-menu-hot-sharing-dishes">
-        Hot Sharing Dishes
+      <a href="/food-menu-hot-sharing-dishes-and-plates">
+        Hot Sharing Dishes & Plates
       </a>
     </li>
   </ul>
