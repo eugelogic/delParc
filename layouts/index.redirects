@@ -15,6 +15,7 @@ https://delparc-hugo.netlify.com/* https://www.delparc.com/:splat 301!
 /wines/red-wine /drinks-red-wine
 /wines/white-wine /drinks-white-wine
 /bar-del-parc /
+/new-bar-del-parc /
 /menus/fish-dishes /food-menus
 /wines/sweet-fortified /drinks
 /food-del-parc /food-menus
@@ -26,7 +27,7 @@ https://delparc-hugo.netlify.com/* https://www.delparc.com/:splat 301!
 /wines-del-parc /drinks
 /menus/puddings-cheese /food-menus
 /menus/vegetables-cheese-dishes /food-menus
-
+/comments/feed /
 
 # redirects for Netlify - https://www.netlify.com/docs/redirects/
 {{- range $p := .Site.Pages -}}
