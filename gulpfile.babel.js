@@ -36,6 +36,7 @@ gulp.task('init-watch', () => {
         server: {
             baseDir: 'public'
         },
+        codeSync: false,
         open: false
     })
     $.watch('src/sass/**/*.scss', () => gulp.start('sass'))
