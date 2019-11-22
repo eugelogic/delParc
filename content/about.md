@@ -17,7 +17,7 @@ draft: false
 
   <p>*</p>
 
-  <p>Wednesday - Saturday from 7.00</p>
+  <p>Open only Weekends now from 7.00</p>
 
   <p>Phone: <a href="tel:02072815684">0207 281 56 84</a></p>
 
