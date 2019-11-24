@@ -1,7 +1,5 @@
 /public
 /node_modules
+/resources
 
-/static/images
-/static/fonts
-/static/css/app.css
-/static/js/app.js
+.DS_Store
