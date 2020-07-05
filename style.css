@@ -7,7 +7,7 @@ html {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   font-size: 10px; */
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   color: #323232;
 }
 
@@ -34,13 +34,23 @@ a {
 }
 
 a:hover {
-  color: #E5C100;
+  color: #e5c100;
 }
 
 p {
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
+}
+
+hr {
+  border-style: none;
+  height: 30px;
+}
+
+.intro p,
+.contact-details p {
+  line-height: 1;
 }
 
 .footer p {
